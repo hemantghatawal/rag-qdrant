@@ -1,9 +1,14 @@
 # this file is for the indexing of the files
+from dotenv import load_dotenv
+
 from pathlib import Path
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain_qdrant import QdrantVectorStore
+
+load_dotenv()
+
 
 pdf_path = Path(__file__).parent / "data" / "sample.pdf"
 
