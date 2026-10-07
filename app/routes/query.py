@@ -34,7 +34,7 @@ async def query(question: str):
     )
 
     response = gemini_client.models.generate_content(
-        model="gemini-3.8-flash",
+        model="gemini-3.7-flash",
         config=types.GenerateContentConfig(
             system_instruction='You are a helpful assistant that answers questions based on the provided context. If the context does not contain the answer, respond with "I don\'t know."'
         ),
